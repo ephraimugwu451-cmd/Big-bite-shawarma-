@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -42,114 +42,96 @@ nav a.active{color:#ff0011;border-bottom:2px solid #ff0011;padding-bottom:3px}
 .card p{font-size:9px;color:#777;line-height:1.4;min-height:32px}
 .card .price{color:#ff0011;font-weight:800;margin-top:8px;font-size:17px}
 
-.about{display:flex
+.about{display:flex;flex-wrap:wrap;padding:40px 4%;background:#0f0f0f;gap:30px;align-items:center}
+.about-left{flex:1;min-width:280px} .about-left h2{font-family:'Anton';font-size:28px}
+.about-left p{color:#aaa;font-size:12px;margin-top:10px;line-height:1.7}
+.feats{display:flex;gap:25px;margin-top:20px}
+.feat{text-align:center} .feat .ico{width:42px;height:42px;border-radius:50%;border:1px solid #ff0011;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;color:#ff0011}
+.feat b{font-size:9px;color:#ccc;line-height:1.2;display:block}
+.about-right{flex:1;min-width:300px} .about-right img{width:100%;height:360px;object-fit:cover;border-radius:12px}
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">FRESH • HOT • LOADED</p>
-        <h1>Big Taste.<br><span>Big Bite.</span></h1>
-        <p class="hero-text">Freshly made shawarma packed with juicy chicken, beef, crunchy vegetables and our signature sauce.</p>
-        <div class="hero-buttons">
-          <a class="btn primary" href="#order">Order Now →</a>
-          <a class="btn secondary" href="#menu">View Menu</a>
-        </div>
-      </div>
-      <div class="hero-food">
-        <div class="food-glow"></div>
-        <div class="shawarma.jpg471b422f7bf903a0c78399bcf7541d60c85689fc</div>
-        <div class="badge"><strong>100%</strong><small>Fresh & Tasty</small></div>
-      </div>
-    </section>
+.footer{position:relative;background:#8b0a12;padding:30px 4%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;overflow:hidden}
+.footer::before{content:'';position:absolute;top:-20px;left:0;width:100%;height:40px;background:#0f0f0f;transform:rotate(-1deg)}
+.footer h4{font-size:11px;display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.footer p{font-size:10px;color:#ffd5d5;line-height:1.5}
+.footer .yellow-btn{background:#ffcc00;color:#000;padding:12px 18px;border-radius:25px;text-decoration:none;font-weight:800;font-size:11px;display:inline-block;margin-top:12px}
+.copy{text-align:center;background:#000;padding:10px;font-size:9px;color:#555}
 
-    <section class="section" id="menu">
-      <div class="section-heading">
-        <p class="eyebrow">OUR MENU</p>
-        <h2>Pick your <span>favorite bite.</span></h2>
-        <p>Simple, filling and made fresh when you order.</p>
-      </div>
+@media(max-width:900px){.menu-grid{grid-template-columns:repeat(2,1fr)} .hero{flex-direction:column} nav{display:none} .hero-text h1{font-size:48px} .footer{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
 
-      <div class="menu-grid">
-        <article class="card featured">
-          <div class="card-photo photo-one">🌯</div>
-          <div class="card-body">
-            <span class="tag">POPULAR</span>
-            <h3>Chicken Shawarma</h3>
-            <p>Juicy chicken, fresh veggies and signature sauce in a warm wrap.</p>
-            <div class="card-bottom"><strong>₦2,500</strong><a href="#order">Order</a></div>
-          </div>
-        </article>
+<header>
+  <div class="logo">🌯 <div>BIG <span>BITE</span><small>SHAWARMA</small></div></div>
+  <nav><a class="active" href="#">HOME</a><a href="#menu">MENU</a><a href="#about">ABOUT US</a><a href="#">GALLERY</a><a href="#">CONTACT</a></nav>
+  <a class="btn-red" href="https://wa.me/2348123456789?text=Hello%20Big%20Bite%20I%20want%20to%20order">💬 ORDER NOW</a>
+</header>
 
-        <article class="card">
-          <div class="card-photo photo-two">🌯</div>
-          <div class="card-body">
-            <h3>Beef Shawarma</h3>
-            <p>Seasoned beef, crunchy vegetables and creamy signature sauce.</p>
-            <div class="card-bottom"><strong>₦2,800</strong><a href="#order">Order</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-photo photo-three">🌯</div>
-          <div class="card-body">
-            <span class="tag">LOADED</span>
-            <h3>Chicken + Beef</h3>
-            <p>The big one — chicken and beef with all the tasty extras.</p>
-            <div class="card-bottom"><strong>₦3,000</strong><a href="#order">Order</a></div>
-          </div>
-        </article>
-
-        <article class="card small-card">
-          <div class="card-body">
-            <h3>Extra Chicken</h3>
-            <p>Make your shawarma even bigger.</p>
-            <div class="card-bottom"><strong>₦700</strong><a href="#order">Add</a></div>
-          </div>
-        </article>
-
-        <article class="card small-card">
-          <div class="card-body">
-            <h3>Extra Cheese</h3>
-            <p>Add a cheesy finish to your wrap.</p>
-            <div class="card-bottom"><strong>₦500</strong><a href="#order">Add</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div>
-        <p class="eyebrow">WHY BIG BITE?</p>
-        <h2>Made for people who want a <span>serious shawarma.</span></h2>
-      </div>
-      <div class="about-points">
-        <div><b>01</b><p><strong>Fresh ingredients</strong><br>Prepared fresh for every order.</p></div>
-        <div><b>02</b><p><strong>Generous portions</strong><br>We don't believe in tiny bites.</p></div>
-        <div><b>03</b><p><strong>Big flavor</strong><br>Our signature sauce brings it together.</p></div>
-      </div>
-    </section>
-
-    <section class="order" id="order">
-      <div class="order-box">
-        <p class="eyebrow">READY TO EAT?</p>
-        <h2>Get your <span>Big Bite</span> today.</h2>
-        <p>Tap the button below to order. We'll confirm your order and delivery details.</p>
-        <a class="btn primary large" href="https://wa.me/2347045329935?text=Hello%20Big%20Bite%20Shawarma!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp →</a>
-        <small class="replace-note">Replace the WhatsApp number in the HTML with your real number before publishing.</small>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact">
-    <div>
-      <a class="logo" href="#home"><span>BIG</span> BITE <b>SHAWARMA</b></a>
-      <p>Big taste. Big bite.</p>
+<section class="hero">
+  <div class="hero-text">
+    <h1>BIG BITE<br><span>SHAWARMA</span></h1>
+    <span class="tag">Big Taste. Big Bite.</span>
+    <p>Juicy. Spicy. Irresistible. Our shawarma is made with premium ingredients, packed with flavor in every bite.</p>
+    <div class="hero-btns">
+      <a class="btn1" href="https://wa.me/2348123456789">💬 ORDER NOW</a>
+      <a class="btn2" href="#menu">VIEW MENU</a>
     </div>
-    <div class="footer-contact">
-      <p><strong>Location:</strong> abuja </p>
-      <p><strong>WhatsApp:</strong> 07045329935</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1561654791-00316c79efa8?q=80&w=1200&auto=format&fit=crop" alt="Big Bite Shawarma">
+  </div>
+</section>
+
+<div class="menu-wrap" id="menu">
+  <h2>OUR MENU</h2>
+  <div class="sub">Made fresh. Made for you.</div>
+  <div class="menu-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?q=80&w=400&auto=format&fit=crop">
+      <h3>CHICKEN SHAWARMA</h3><p>Well seasoned chicken with fresh veggies & sauce.</p><div class="price">₦2,500</div>
     </div>
-    <p class="copyright">© 2026 Big Bite Shawarma. All rights reserved.</p>
-  </footer>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400&auto=format&fit=crop">
+      <h3>BEEF SHAWARMA</h3><p>Tender beef, grilled to perfection with special sauce.</p><div class="price">₦2,800</div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=400&auto=format&fit=crop">
+      <h3>CHICKEN + BEEF SHAWARMA</h3><p>The perfect mix of chicken and beef in one wrap.</p><div class="price">₦3,000</div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=400&auto=format&fit=crop">
+      <h3>EXTRA CHICKEN</h3><p>Add more juicy chicken to your shawarma.</p><div class="price">₦700</div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=400&auto=format&fit=crop">
+      <h3>EXTRA CHEESE</h3><p>Make it cheesy and even more delicious.</p><div class="price">₦500</div>
+    </div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="about-left">
+    <h2>ABOUT US</h2>
+    <p>At Big Bite Shawarma, we serve more than just food - we serve an experience. Our shawarma is prepared with love, premium ingredients and a passion for delivering the best taste in every bite.</p>
+    <div class="feats">
+      <div class="feat"><div class="ico">🔥</div><b>FRESH<br>INGREDIENTS</b></div>
+      <div class="feat"><div class="ico">🍖</div><b>PERFECTLY<br>GRILLED</b></div>
+      <div class="feat"><div class="ico">❤️</div><b>MADE<br>WITH LOVE</b></div>
+    </div>
+  </div>
+  <div class="about-right">
+    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=800&auto=format&fit=crop" alt="Shawarma grill">
+  </div>
+</section>
+
+<div class="footer">
+  <div><h4>📍 OUR LOCATION</h4><p>We are located at a convenient spot to serve you better.<br>Visit us today!</p></div>
+  <div><h4>🕒 OPENING HOURS</h4><p>Monday - Sunday<br>10:00 AM - 10:00 PM<br><span style="color:#ffcc00">We're always ready!</span></p></div>
+  <div><h4>🛵 FAST DELIVERY</h4><p>We deliver hot and fresh shawarma right to your doorstep.</p></div>
+  <div><h4>💬 ORDER NOW</h4><p>Click the button below to chat with us on WhatsApp and place your order.</p><a class="yellow-btn" href="https://wa.me/2348123456789">💬 ORDER NOW ON WHATSAPP</a></div>
+</div>
+<div class="copy">© 2024 Big Bite Shawarma. All Rights Reserved.</div>
+
 </body>
-</html>
+</html>  
