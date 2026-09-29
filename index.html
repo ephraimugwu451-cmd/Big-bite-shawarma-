@@ -1,31 +1,48 @@
-<div id="entry-profile" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-  <img src=file_00000000a55081f48e33b10f0dd1282d.png.jpg." style="width:100%; height:100%; object-fit:contain;" alt="Big Bite Shawarma">
-  <a href="#home" onclick="document.getElementById('file_00000000a55081f48e33b10f0dd1282d.png').style.display='file_00000000a55081f48e33b10f0dd1282d.png'" 
-     style="position:absolute; bottom:40px; background:#e30613; color:white; padding:15px 40px; border-radius:30px; text-decoration:none; font-weight:bold; font-family:Arial;">
-     ENTER WEBSITE - ORDER NOW
-  </a>
-</div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Big Bite Shawarma — fresh, tasty shawarma made to order.">
-  <title>Big Bite Shawarma</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="navbar">
-    <a class="logo" href="#home"><span>BIG</span> BITE <b>SHAWARMA</b></a>
-    <nav>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-order" href="#order">Order Now</a>
-  </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIG BITE SHAWARMA - Big Taste. Big Bite.</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#070707;color:#fff}
+header{background:#000;display:flex;justify-content:space-between;align-items:center;padding:12px 4%;position:sticky;top:0;z-index:1000;border-bottom:1px solid #111}
+.logo{display:flex;align-items:center;gap:8px;font-family:'Anton';font-size:26px;letter-spacing:.5px}
+.logo span{color:#ff0011} .logo small{display:block;font-size:10px;color:#ffcc00;letter-spacing:3px;margin-top:-5px;font-family:'Poppins'}
+nav{display:flex;gap:20px} nav a{color:#aaa;text-decoration:none;font-size:12px;font-weight:600}
+nav a.active{color:#ff0011;border-bottom:2px solid #ff0011;padding-bottom:3px}
+.btn-red{background:#c8000f;color:#fff;padding:10px 20px;border-radius:25px;text-decoration:none;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px}
+
+.hero{background:#000;position:relative;display:flex;align-items:center;justify-content:space-between;padding:40px 4% 50px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(255,100,0,.12),transparent 40%)}
+.hero-text{position:relative;z-index:2;flex:1;min-width:300px;max-width:520px}
+.hero-text h1{font-family:'Anton';font-size:68px;line-height:.9;letter-spacing:1px}
+.hero-text h1 span{color:#ff0011}
+.hero-text .tag{color:#ffcc33;font-family:'Great Vibes',cursive;font-style:italic;font-size:26px;margin:10px 0;display:block}
+.hero-text p{color:#bbb;font-size:13px;line-height:1.6;margin:12px 0 22px;max-width:400px}
+.hero-btns{display:flex;gap:10px}
+.hero-btns a{padding:11px 22px;border-radius:25px;text-decoration:none;font-size:12px;font-weight:700}
+.btn1{background:#c8000f;color:#fff} .btn2{border:1px solid #c8000f;color:#fff}
+
+.hero-img{flex:1;position:relative;z-index:2;display:flex;justify-content:flex-end;min-width:320px}
+.hero-img img{width:100%;max-width:720px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.8));border-radius:10px}
+
+.menu-wrap{background:#070707;padding:30px 4% 40px;text-align:center}
+.menu-wrap h2{font-family:'Anton';font-size:32px;letter-spacing:2px;position:relative;display:inline-block}
+.menu-wrap h2::before,.menu-wrap h2::after{content:'';position:absolute;top:50%;width:40px;height:2px;background:#ff0011}
+.menu-wrap h2::before{left:-55px} .menu-wrap h2::after{right:-55px}
+.menu-wrap .sub{color:#888;font-size:12px;margin-top:4px}
+.menu-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px}
+.card{background:linear-gradient(to bottom,#151515,#0a0a0a);border:1px solid #2a0a0a;border-radius:12px;padding:8px 8px 14px;transition:.3s}
+.card:hover{border-color:#ff0011;transform:translateY(-5px)}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+.card h3{font-size:11px;margin:10px 0 4px;line-height:1.3;min-height:28px}
+.card p{font-size:9px;color:#777;line-height:1.4;min-height:32px}
+.card .price{color:#ff0011;font-weight:800;margin-top:8px;font-size:17px}
+
+.about{display:flex
 
   <main>
     <section class="hero" id="home">
@@ -129,8 +146,8 @@
       <p>Big taste. Big bite.</p>
     </div>
     <div class="footer-contact">
-      <p><strong>Location:</strong> Add your location</p>
-      <p><strong>WhatsApp:</strong> Add your number</p>
+      <p><strong>Location:</strong> abuja </p>
+      <p><strong>WhatsApp:</strong> 07045329935</p>
     </div>
     <p class="copyright">© 2026 Big Bite Shawarma. All rights reserved.</p>
   </footer>
